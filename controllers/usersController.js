@@ -17,7 +17,7 @@ module.exports = {
     },
     register: function(req, res, next) {
         console.log('/register handler', req.body);
-		Account.register(new Account({ username : req.body.username }), req.body.password, (err, account) => {
+		Account.register(new Account({ username : req.body.username, score: 0 }), req.body.password, (err, account) => {
 				if (err) {
 					return res.status(500).send({ error : err.message });
 				}
@@ -57,6 +57,14 @@ module.exports = {
     test: function(req , res, next){
         console.log(`Ping Dinger ${req.statusCode}`);
 		res.status(200).send("Dong!");
-    }
+	},
+	updateScore: function(req, res) {
+		console.log("Well work on this later.");
+		res.status(200).send("YOOOO")
+	},
+	getScore: function(req, res) {
+		console.log("Well also work on this soon.");
+		res.status(200).send("YOOOO")
+	}
 
 };

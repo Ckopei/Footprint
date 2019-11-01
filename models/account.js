@@ -4,9 +4,12 @@ const passportLocalMongoose = require('passport-local-mongoose');
 
 const Account = new Schema({
     username: String,
-    password: String
+    password: String,
+    score: Number
 });
 
 Account.plugin(passportLocalMongoose);
 
-module.exports = mongoose.model('accounts', Account);
+const accounts = mongoose.model('accounts', Account);
+
+module.exports = accounts;

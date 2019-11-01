@@ -6,8 +6,7 @@ router.route("/")
   .get(usersController.getUser);
 
 /* Authentication Routes */
-router.route("/register")
-  .post(usersController.register);
+router.route("/register").post(usersController.register);
 
 router.route("/login")
 .post(passport.authenticate('local', { failureRedirect: '/login' }),            usersController.login);
@@ -15,8 +14,12 @@ router.route("/login")
 router.route("/logout")
   .get(usersController.logout);
 
-
-// Matches with "/api/users/:id"
+//this will be the route to grab the score when users login to show their level
+router.route("/score")
+  .get(usersController.getScore);
+//this will be the route to update the users score when they press a button.
+router.route("/update")
+  .get(usersController.updateScore)
 
 /* Testing Endpoint */
 router
