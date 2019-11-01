@@ -37,6 +37,9 @@ class Nav extends Component {
         <Link className="navbar-brand" to="/">
           Auth Plate
         </Link>
+        <Link className="navbar-brand" to="/register">
+          Register
+        </Link>
         <button
           onClick={this.toggleNav}
           className="navbar-toggler"
