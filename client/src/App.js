@@ -15,6 +15,7 @@ import Register from "./components/Register";
 import { Container } from "./components/Grid";
 import PublicRoute from "./pages/PublicRoute";
 import ProtectedRoute from "./pages/PublicRoute";
+import Title from "./components/Title/title";
 import './App.css';
 
 //I want to add some basic inline styling here, even though we are bringing in styles
@@ -25,11 +26,13 @@ const listStyle = {
 //Now we have all the stuff we need .. let's render some components with the Router
 const AuthExample = () => (
 	<Router>
-		<div>
+		<div className="main-body">
 			<Nav className="App-header" />
 			<Container>
-				<AuthButton />
-				<ul style={listStyle}>
+				<Title />
+				
+				{/* <AuthButton /> */}
+				{/* <ul style={listStyle}>
 					<li><Link to="/public">Public Page</Link></li>
 					<li><Link to="/protected">Protected Page</Link></li>
 					<li><Link to="/register">Register a New User</Link></li>
@@ -39,7 +42,7 @@ const AuthExample = () => (
 						}}>
 						Test Route!
 					</button>
-				</ul>
+				</ul> */}
 				<Switch>
 					<Route path="/public" component={PublicRoute} />
 					<Route path="/login" component={Login} />
@@ -91,5 +94,6 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 
 
 
-export default AuthExample
+export default AuthExample; 
+
 
