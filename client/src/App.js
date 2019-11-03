@@ -12,6 +12,7 @@ import API from "./utils/API";
 import Nav from "./components/Nav";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import Buttons from "./components/Buttons";
 import { Container } from "./components/Grid";
 import PublicRoute from "./pages/PublicRoute";
 import ProtectedRoute from "./pages/PublicRoute";
@@ -47,17 +48,21 @@ const AuthExample = () => (
 						Test Route!
 					</button>
 				</ul> */}
-        <Switch>
-          <Route path="/public" component={PublicRoute} />
-          <Route path="/login" component={Login} />
-          <Route path="/register" component={Register} />
-          <PrivateRoute path="/protected" component={ProtectedRoute} />
-          {/* <Route component={NoMatch} /> */}
-        </Switch>
-      </Container>
-    </div>
-  </Router>
-);
+
+				<Switch>
+					<Route path="/public" component={PublicRoute} />
+					<Route path="/login" component={Login} />
+					<Route path="/register" component={Register} />
+					<Route path="/buttons" component={Buttons} />
+					<PrivateRoute path="/protected" component={ProtectedRoute} />
+					{/* <Route component={NoMatch} /> */}
+				</Switch>
+			</Container>
+		</div>
+	</Router>
+)
+
+
 
 //Authbutton component / withRouter is imported from react-router
 const AuthButton = withRouter(({ history }) =>
