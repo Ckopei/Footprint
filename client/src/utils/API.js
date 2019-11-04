@@ -1,5 +1,4 @@
 import axios from "axios";
-
 export default {
   // Gets all books
   getScore: function() {
@@ -11,5 +10,9 @@ export default {
   // Gets the book with the given id
   updateScore: function(id) {
     return axios.get("/api/users/update/" + id);
+  },
+
+  getUser: function(username) {
+    return axios.get("/api/user" + username)
   }
 };

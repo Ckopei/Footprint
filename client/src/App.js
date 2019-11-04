@@ -10,7 +10,7 @@ import {
 import Auth from "./utils/Auth";
 import API from "./utils/API";
 import Nav from "./components/Nav";
-import Login from "./components/Login";
+import {Login, username} from "./components/Login";
 import Register from "./components/Register";
 import Buttons from "./components/Buttons";
 import { Container } from "./components/Grid";
@@ -69,6 +69,7 @@ const AuthButton = withRouter(({ history }) => (
 				}}>
 				Sign out
 			</button>
+			<span className="spanAuth">Hello {username}</span>
 		</div>
 	) : (
 			<p>You are not logged in.</p>
