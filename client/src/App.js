@@ -34,7 +34,6 @@ const AuthExample = () => (
         <Title />
 		{/* I would like to link these in the public route, but it won't 
 		let me - If I leave them here, they appear on every page. */}
-        <LandingButtons />
         {/* <AuthButton /> */}
         {/* <ul style={listStyle}>
 					<li><Link to="/public">Public Page</Link></li>
@@ -48,7 +47,7 @@ const AuthExample = () => (
 					</button>
 				</ul> */}
         <Switch>
-          <Route path="/public" component={PublicRoute} />
+          <Route path="/" component={PublicRoute} />
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
           <PrivateRoute path="/protected" component={ProtectedRoute} />
