@@ -1,7 +1,10 @@
-constant db = require("../models/account");
+const db = require("../models/account");
 
 module.export ={
-    // findUser: 
-    //mongoose query to users (Account) 
-    //user req.params.username
+    findUser: function(req, res) {
+        
+          db.findOne({username: req.params.username})
+          .then(data => res.json(data))
+          .catch(err => res.status(422).json(err));
+      }
 };

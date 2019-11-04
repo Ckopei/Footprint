@@ -1,5 +1,5 @@
 import React from 'react'
-import { username } from "./components/Login";
+import { username } from "../../components/Login";
 import API from '../../utils/API';
 
 
@@ -9,14 +9,18 @@ import API from '../../utils/API';
 class ProtectedRoute extends React.Component {
 	//state for user
 	state = {
-		username
+		user:[]
 	}
 
 	// component mount
 	componentDidMount(){
+		console.log(`look ${username}`)
 		API.getUser(username)
-		.then(function(res) {
-			console.log(res)
+		.then(res => {
+			console.log(res.data);
+			
+			this.setState({user: res.data})
+			console.log(this.state.user)
 		})
 	}
 
