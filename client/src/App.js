@@ -12,6 +12,7 @@ import API from "./utils/API";
 import Nav from "./components/Nav";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import Buttons from "./components/Buttons";
 import { Container } from "./components/Grid";
 import PublicRoute from "./pages/PublicRoute";
 import ProtectedRoute from "./pages/ProtectedRoute";
@@ -45,6 +46,7 @@ const AuthExample = () => (
 						Test Route!
 					</button>
 				</ul> */}
+
         <Switch>
           <Route exact path="/" component={PublicRoute} />
           <Route exact path="/login" component={Login} />
@@ -56,6 +58,7 @@ const AuthExample = () => (
     </div>
   </Router>
 );
+
 
 //Authbutton component / withRouter is imported from react-router
 const AuthButton = withRouter(({ history }) =>
