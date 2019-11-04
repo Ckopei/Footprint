@@ -1,4 +1,25 @@
 .form-group {
-    color: white;
-    width: 500px;
+    margin: 20px;
+    width: 300px;
+    position: relative;
+   
+}
+
+.card {
+    position: relative;    
+    top: 100px;
+    background: white;
+    width: 400px;
+    height: 300px;
+}
+
+.form-group > span {
+    font-size: 15px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.btn {
+    margin: 5px;
 }

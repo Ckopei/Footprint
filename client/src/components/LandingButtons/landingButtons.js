@@ -30,10 +30,7 @@ function LandingButtons() {
         </button>
       </Link>
       <Link to="/register">
-        <button
-          className="btn btn-lg btn-primary sign-up"
-          style={signUp}
-        >
+        <button className="btn btn-lg btn-primary sign-up" style={signUp}>
           Sign Up
         </button>
       </Link>
