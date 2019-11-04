@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import { Link } from "react-router-dom";
 
 class LoginForm extends React.Component {
   // refs
@@ -42,10 +43,10 @@ class LoginForm extends React.Component {
             />
             <br />
             <button className="btn btn-success" type="submit">
-              Submit
+              Log In
             </button>
             <span>or</span>
-            <button className="btn btn-danger">Sign Up</button>
+            <Link to="/register"><button className="btn btn-danger">Sign Up</button></Link>
           </div>
         </form>
       </div>
