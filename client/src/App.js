@@ -14,10 +14,9 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import { Container } from "./components/Grid";
 import PublicRoute from "./pages/PublicRoute";
-import ProtectedRoute from "./pages/PublicRoute";
+import ProtectedRoute from "./pages/ProtectedRoute";
 import Title from "./components/Title/title";
 import "./App.css";
-import LandingButtons from "./components/LandingButtons/landingButtons";
 
 //I want to add some basic inline styling here, even though we are bringing in styles
 const listStyle = {
@@ -32,7 +31,7 @@ const AuthExample = () => (
       <Nav className="App-header" />
       <Container>
         <Title />
-		{/* I would like to link these in the public route, but it won't 
+        {/* I would like to link these in the public route, but it won't 
 		let me - If I leave them here, they appear on every page. */}
         {/* <AuthButton /> */}
         {/* <ul style={listStyle}>
@@ -47,10 +46,10 @@ const AuthExample = () => (
 					</button>
 				</ul> */}
         <Switch>
-          <Route path="/" component={PublicRoute} />
-          <Route path="/login" component={Login} />
-          <Route path="/register" component={Register} />
-          <PrivateRoute path="/protected" component={ProtectedRoute} />
+          <Route exact path="/" component={PublicRoute} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/register" component={Register} />
+          <PrivateRoute exact path="/protected" component={ProtectedRoute} />
           {/* <Route component={NoMatch} /> */}
         </Switch>
       </Container>

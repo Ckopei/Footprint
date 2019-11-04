@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 // Styles for the buttons
 const buttonDivStyling = {
   margin: "0 auto",
@@ -24,12 +24,19 @@ const logIn = {
 function LandingButtons() {
   return (
     <div className="sign-in-buttons" style={buttonDivStyling}>
-      <button className="btn btn-lg log-in" style={logIn}>
-        Log In
-      </button>
-      <button className="btn btn-lg btn-primary sign-up" style={signUp}>
-        Sign Up
-      </button>
+      <Link to="/login">
+        <button className="btn btn-lg log-in" style={logIn}>
+          Log In
+        </button>
+      </Link>
+      <Link to="/register">
+        <button
+          className="btn btn-lg btn-primary sign-up"
+          style={signUp}
+        >
+          Sign Up
+        </button>
+      </Link>
     </div>
   );
 }
