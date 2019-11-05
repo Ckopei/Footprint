@@ -3,10 +3,6 @@ import { username } from "../../components/Login";
 import API from '../../utils/API';
 import Buttons from "../../components/Buttons"
 
-
-
-
-/* This is a very simple component.. it probably doesn't need to be a smart component at this point but you never know what's goingto happen in the future */
 class ProtectedRoute extends React.Component {
 	//state for user
 	state = {
@@ -14,22 +10,29 @@ class ProtectedRoute extends React.Component {
 	}
 	//i can now access user data by using this.state.user
 
-	// component mount
+	// component mount, any time the page is loaded.
 	componentDidMount() {
 		console.log(`look ${username}`)
-		API.getUser(username)
-			.then(res => {
-				// console.log(res.data);
-				this.setState({ user: res.data })
-				// console.log(this.state.user)
-			})
+		this.firstThing();
 	}
-
+	
+	// this function does a get request to pull back the currently logged in user on this page and dump the user object into our state.
+	firstThing = () => {
+		API.getUser(username)
+		.then(res => {
+			// console.log(res.data);
+			this.setState({ user: res.data })
+			// console.log(this.state.user)
+		})
+	}
+	//put request that just adds 6 to the user score every click, then updates the user state.
 	updateScore = () => {
 		console.log(this.state);
 		API.updateScore(this.state.user)
 			.then(res => {
 				console.log(res)
+				this.firstThing();
+
 			});
 
 	}
