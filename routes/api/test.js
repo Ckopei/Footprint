@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const db = require("../../models/account");
-const scoreController = require("../../controllers/scoreController")
+// const scoreController = require("../../controllers/scoreController")
 
 // router.route("/:username")
 // .get(scoreController.findUser)

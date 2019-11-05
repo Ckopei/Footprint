@@ -8,11 +8,10 @@ import {
   withRouter
 } from "react-router-dom";
 import Auth from "./utils/Auth";
-import API from "./utils/API";
+// import API from "./utils/API";
 import Nav from "./components/Nav";
 import {Login, username} from "./components/Login";
 import Register from "./components/Register";
-import Buttons from "./components/Buttons";
 import { Container } from "./components/Grid";
 import PublicRoute from "./pages/PublicRoute";
 import ProtectedRoute from "./pages/ProtectedRoute";

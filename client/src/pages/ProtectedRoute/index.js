@@ -11,6 +11,7 @@ class ProtectedRoute extends React.Component {
 	state = {
 		user:[]
 	}
+	//i can now access user data by using this.state.user
 
 	// component mount
 	componentDidMount(){
@@ -37,6 +38,7 @@ class ProtectedRoute extends React.Component {
 
 	render() {
 		return (
+			
 			<h3>This is a Protected Route, You must log in to see this page.</h3>
 		)
 	}
