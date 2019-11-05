@@ -1,6 +1,7 @@
 import React from 'react'
 import { username } from "../../components/Login";
 import API from '../../utils/API';
+import Buttons from "../../components/Buttons"
 
 
 
@@ -9,37 +10,36 @@ import API from '../../utils/API';
 class ProtectedRoute extends React.Component {
 	//state for user
 	state = {
-		user:[]
+		user: []
 	}
 	//i can now access user data by using this.state.user
 
 	// component mount
-	componentDidMount(){
+	componentDidMount() {
 		console.log(`look ${username}`)
 		API.getUser(username)
-		.then(res => {
-			console.log(res.data);
-			
-			this.setState({user: res.data})
-			console.log(this.state.user)
-		})
+			.then(res => {
+				// console.log(res.data);
+				this.setState({ user: res.data })
+				// console.log(this.state.user)
+			})
 	}
 
-	//api.getUSer(username)
-	// .then(res) Data.username
+	updateScore = () => {
+		console.log(this.state);
+		API.updateScore(this.state.user)
+			.then(res => {
+				console.log(res)
+			});
 
-
-	//getUSerInfo is a method
-	//API.getUSer
-
-
-
-
+	}
 
 	render() {
 		return (
-			
-			<h3>This is a Protected Route, You must log in to see this page.</h3>
+			<div>
+				<h3>This is a Protected Route, You must log in to see this page.</h3>
+				<Buttons updateScore={this.updateScore} />
+			</div>
 		)
 	}
 }
