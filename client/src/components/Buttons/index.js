@@ -10,32 +10,33 @@ class Buttons extends React.Component {
     render() {
         return (
             <div>
+            
             <div className="row mx-auto">
                 <div className="col-4 text-center mt-5">
-                    <img className="biggerImg" src="/button/bicycle.png" alt="my image" onClick={this.myfunction} />
+                    <img className="biggerImg" src="/button/bicycle.png" alt="my image" onClick={this.props.updateScore} />
                     <h3>Bicycle</h3>
                 </div>
                 <div className="col-4 text-center mt-5">
-                    <img className="biggerImg" src="/button/carpool.png" alt="my image" onClick={this.myfunction} />
+                    <img className="biggerImg" src="/button/carpool.png" alt="my image" onClick={this.props.updateScore} />
                     <h3>Car</h3>
                 </div>
                 <div className="col-4 text-center mt-5">
-                    <img className="biggerImg" src="/button/earth.png" alt="my image" onClick={this.myfunction} />
+                    <img className="biggerImg" src="/button/earth.png" alt="my image" onClick={this.props.updateScore} />
                     <h3>Earth</h3>
                 </div>
             </div>
 
             <div className="row mx-auto">
                 <div className="col-4 text-center mt-5">
-                    <img className="biggerImg" src="/button/flowers.png" alt="my image" onClick={this.myfunction} />
+                    <img className="biggerImg" src="/button/flowers.png" alt="my image" onClick={this.props.updateScore} />
                     <h3>Flowers</h3>
                 </div>
                 <div className="col-4 text-center mt-5">
-                    <img className="biggerImg" src="/button/house.png" alt="my image" onClick={this.myfunction} />
+                    <img className="biggerImg" src="/button/house.png" alt="my image" onClick={this.props.updateScore} />
                     <h3>House</h3>
                 </div>
                 <div className="col-4 text-center mt-5">
-                    <img className="biggerImg" src="/button/leaf.png" alt="my image" onClick={this.myfunction} />
+                    <img className="biggerImg" src="/button/leaf.png" alt="my image" onClick={this.props.updateScore} />
                     <h3>Leaf</h3>
                 </div>
             </div>
