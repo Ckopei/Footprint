@@ -3,7 +3,6 @@ import { username } from "../../components/Login";
 import API from '../../utils/API';
 import Buttons from "../../components/Buttons"
 import Score from "../../components/Score"
-import DisplayName from "../../components/DisplayName"
 
 
 class ProtectedRoute extends React.Component {
@@ -40,9 +39,8 @@ class ProtectedRoute extends React.Component {
 
 	render() {
 		return (
-			<div>
-				<DisplayName username={this.state.user.username} />
-				<Score score={this.state.user.score} />
+			<div className="userContainer">
+				<Score username={this.state.user.username} score={this.state.user.score} />
 				<Buttons updateScore={this.updateScore} />
 			</div>
 		)
