@@ -13,16 +13,16 @@ class Buttons extends React.Component {
           <div className="col-4 text-center mt-5">
             <img
               className="biggerImg"
-              src="/button/bicycle.png"
+              src="/buttons/light.svg"
               alt="bicycle"
               onClick={this.props.updateScore}
             />
-            <h3>Bicycle</h3>
+            <h3>light</h3>
           </div>
           <div className="col-4 text-center mt-5">
             <img
               className="biggerImg"
-              src="/button/carpool.png"
+              src="/buttons/car.svg"
               alt="car"
               onClick={this.props.updateScore}
             />
@@ -31,11 +31,11 @@ class Buttons extends React.Component {
           <div className="col-4 text-center mt-5">
             <img
               className="biggerImg"
-              src="/button/earth.png"
+              src="/buttons/world.svg"
               alt="earth"
               onClick={this.props.updateScore}
             />
-            <h3>Earth</h3>
+            <h3>world</h3>
           </div>
         </div>
 
@@ -43,29 +43,29 @@ class Buttons extends React.Component {
           <div className="col-4 text-center mt-5">
             <img
               className="biggerImg"
-              src="/button/flowers.png"
+              src="/buttons/water.svg"
               alt="flowers"
               onClick={this.props.updateScore}
             />
-            <h3>Flowers</h3>
+            <h3>water</h3>
           </div>
           <div className="col-4 text-center mt-5">
             <img
               className="biggerImg"
-              src="/button/house.png"
+              src="/buttons/windmill.svg"
               alt="house"
               onClick={this.props.updateScore}
             />
-            <h3>House</h3>
+            <h3>windmill</h3>
           </div>
           <div className="col-4 text-center mt-5">
             <img
               className="biggerImg"
-              src="/button/leaf.png"
+              src="/buttons/light.svg"
               alt="leaf"
               onClick={this.props.updateScore}
             />
-            <h3>Leaf</h3>
+            <h3>light</h3>
           </div>
         </div>
       </div>
