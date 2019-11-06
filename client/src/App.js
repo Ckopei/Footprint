@@ -33,8 +33,8 @@ const AuthExample = () => (
         <Title />
         {/* I would like to link these in the public route, but it won't 
 		let me - If I leave them here, they appear on every page. */}
-        {/* <AuthButton /> */}
-        {/* <ul style={listStyle}>
+        {/* <AuthButton />
+        <ul style={listStyle}>
 					<li><Link to="/public">Public Page</Link></li>
 					<li><Link to="/protected">Protected Page</Link></li>
 					<li><Link to="/register">Register a New User</Link></li>
