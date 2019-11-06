@@ -2,13 +2,11 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Route,
-  Link,
   Redirect,
   Switch,
   withRouter
 } from "react-router-dom";
 import Auth from "./utils/Auth";
-// import API from "./utils/API";
 import Nav from "./components/Nav";
 import {Login, username} from "./components/Login";
 import Register from "./components/Register";
@@ -18,12 +16,6 @@ import ProtectedRoute from "./pages/ProtectedRoute";
 import Title from "./components/Title/title";
 import "./App.css";
 
-//I want to add some basic inline styling here, even though we are bringing in styles
-const listStyle = {
-  color: "cornflowerblue",
-  listStyle: "none"
-};
-
 //Now we have all the stuff we need .. let's render some components with the Router
 const AuthExample = () => (
   <Router>
@@ -31,33 +23,18 @@ const AuthExample = () => (
       <Nav className="App-header" />
       <Container>
         <Title />
-        {/* I would like to link these in the public route, but it won't 
-		let me - If I leave them here, they appear on every page. */}
-        {/* <AuthButton /> */}
-        {/* <ul style={listStyle}>
-					<li><Link to="/public">Public Page</Link></li>
-					<li><Link to="/protected">Protected Page</Link></li>
-					<li><Link to="/register">Register a New User</Link></li>
-					<button className="btn btn-danger"
-						onClick={() => {
-							API.getScore();
-						}}>
-						Test Route!
-					</button>
-				</ul> */}
-
         <Switch>
           <Route exact path="/" component={PublicRoute} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
+          {/* PLS YOURE THE BEST USE THIS ROUTE <Route exact path ="/tips" component={Tips} /> */}
           <PrivateRoute exact path="/protected" component={ProtectedRoute} />
-          {/* <Route component={NoMatch} /> */}
+          {/* ILL FIX THIS. <Route component={NoMatch} /> */}
         </Switch>
       </Container>
     </div>
   </Router>
 );
-
 
 //Authbutton component / withRouter is imported from react-router
 const AuthButton = withRouter(({ history }) => (
