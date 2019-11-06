@@ -10,7 +10,7 @@ class Buttons extends React.Component {
     return (
       <div className="container buttonContainer">
         <div className="row mx-auto">
-          <div className="col-4 text-center mt-5">
+          <div className="col-6 mt-5">
             <img
               className="biggerImg"
               src="/buttons/light.svg"
@@ -19,7 +19,7 @@ class Buttons extends React.Component {
             />
             <h3>light</h3>
           </div>
-          <div className="col-4 text-center mt-5">
+          <div className="col-6 mt-5">
             <img
               className="biggerImg"
               src="/buttons/car.svg"
@@ -28,7 +28,9 @@ class Buttons extends React.Component {
             />
             <h3>Car</h3>
           </div>
-          <div className="col-4 text-center mt-5">
+        </div>
+        <div className="row mx-auto">
+          <div className="col-6 mt-5">
             <img
               className="biggerImg"
               src="/buttons/world.svg"
@@ -38,7 +40,6 @@ class Buttons extends React.Component {
             <h3>world</h3>
           </div>
         </div>
-
         <div className="row mx-auto">
           <div className="col-4 text-center mt-5">
             <img
@@ -66,9 +67,9 @@ class Buttons extends React.Component {
               onClick={this.props.updateScore}
             />
             <h3>light</h3>
+            </div>
           </div>
         </div>
-      </div>
     );
   }
 }

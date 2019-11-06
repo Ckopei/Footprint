@@ -2,13 +2,9 @@ import React from "react";
 import "./style.css";
 
 class Score extends React.Component {
-    render() {
-        return (
-            <div>
-                <h3 className="score">Your score is: {this.props.score}</h3>
-            </div>
-        )
-    }
+  render() {
+    return <h3 className="score">Your score is: {this.props.score}</h3>;
+  }
 }
 
 export default Score;

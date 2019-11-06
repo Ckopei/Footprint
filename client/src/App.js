@@ -23,6 +23,7 @@ const AuthExample = () => (
       <Nav className="App-header" />
       <Container>
         <Title />
+
         <Switch>
           <Route exact path="/" component={PublicRoute} />
           <Route exact path="/login" component={Login} />
