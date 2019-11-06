@@ -2,7 +2,8 @@ import React from 'react'
 import { username } from "../../components/Login";
 import API from '../../utils/API';
 import Buttons from "../../components/Buttons"
-import MainButtonContainer from '../../components/MainButtonContainer/MainButtonContainer';
+import Score from "../../components/Score"
+
 
 class ProtectedRoute extends React.Component {
 	//state for user
@@ -33,15 +34,14 @@ class ProtectedRoute extends React.Component {
 			.then(res => {
 				console.log(res)
 				this.firstThing();
-
 			});
-
 	}
 
 	render() {
 		return (
 			<div>
 				<Buttons updateScore={this.updateScore} />
+				<Score score={this.state.user.score} />
 			</div>
 		)
 	}
