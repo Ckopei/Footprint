@@ -4,6 +4,7 @@ import API from '../../utils/API';
 import Buttons from "../../components/Buttons"
 import Score from "../../components/Score"
 
+
 class ProtectedRoute extends React.Component {
 	//state for user
 	state = {
@@ -39,7 +40,6 @@ class ProtectedRoute extends React.Component {
 	render() {
 		return (
 			<div>
-				<h3>This is a Protected Route, You must log in to see this page.</h3>
 				<Buttons updateScore={this.updateScore} />
 				<Score score={this.state.user.score} />
 			</div>
