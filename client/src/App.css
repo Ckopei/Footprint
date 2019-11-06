@@ -2,11 +2,6 @@
   text-align: center;
 }
 
-.main-body {
-  background-image: url(./images/background.png);
-  min-height: 900px;
-}
-
 .App-header {
   background-color: white;
   height: 150px;
