@@ -46,11 +46,11 @@ class RegisterForm extends React.Component {
               placeholder="Password"
             />
             <br />
-            <Link to="/welcome">
+         
               <button className="btn btn btn-danger" type="submit">
                 Sign Up
               </button>
-            </Link>
+          
             <span>or</span>
             <Link to="/login">
               <button className="btn btn-success">Log In</button>
