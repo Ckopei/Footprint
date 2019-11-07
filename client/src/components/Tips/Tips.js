@@ -1,17 +1,23 @@
 import React from "react";
 import { Container } from "../Grid";
 import Title from "../Title/title";
-import Nav from "../Nav/index";
+import LogOutNav from "../LogOutNav/LogOutNav";
 import "./style.css";
 
 class Tips extends React.Component {
   render() {
     return (
       <div>
-        <Nav className="App-header" />
+        <LogOutNav className="App-header" />
         <Container>
           <Title />
-          <div className="tipsContainer">
+          <div className="tipsContainer text-center">
+            <h3>Tips and Tricks</h3>
+            <p class="lead">
+              Click on the buttons below to learn more about how you can do your
+              part in your community!
+            </p>
+            <hr></hr>
             <button
               type="button"
               className="btn btn-primary tipButton"
@@ -22,7 +28,7 @@ class Tips extends React.Component {
             </button>
             <button
               type="button"
-              className="btn btn-primary tipButton"
+              className="btn btn-light tipButton"
               data-toggle="modal"
               data-target="#modal2"
             >
@@ -30,7 +36,7 @@ class Tips extends React.Component {
             </button>
             <button
               type="button"
-              className="btn btn-primary tipButton"
+              className="btn btn-success tipButton"
               data-toggle="modal"
               data-target="#modal3"
             >
@@ -38,7 +44,7 @@ class Tips extends React.Component {
             </button>
             <button
               type="button"
-              className="btn btn-primary tipButton"
+              className="btn btn-warning tipButton"
               data-toggle="modal"
               data-target="#modal4"
             >
@@ -46,7 +52,7 @@ class Tips extends React.Component {
             </button>
             <button
               type="button"
-              className="btn btn-primary tipButton"
+              className="btn btn-info tipButton"
               data-toggle="modal"
               data-target="#modal5"
             >
@@ -54,7 +60,7 @@ class Tips extends React.Component {
             </button>
             <button
               type="button"
-              className="btn btn-primary tipButton"
+              className="btn btn-danger tipButton"
               data-toggle="modal"
               data-target="#modal6"
             >

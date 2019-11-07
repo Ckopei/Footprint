@@ -1,11 +1,13 @@
 .tipsContainer {
-    margin-top: 10%;
-    width: 800px;
+  padding: 25px;
+  margin-top: 5%;
+  width: 800px;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .tipButton {
-    margin: 20px;
-    width: 200px;
+  margin: 20px;
+  width: 200px;
 }
 
 .modal {
@@ -19,6 +21,6 @@
 }
 
 img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }

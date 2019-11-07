@@ -69,6 +69,19 @@ class LogOutNav extends Component {
             </li>
             <li className="nav-item">
               <Link
+                onClick={this.toggleNav}
+                className={
+                  window.location.pathname === "/"
+                    ? "nav-link active"
+                    : "nav-link"
+                }
+                to="/tips"
+              >
+                Tips
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
                 onClick={this.logout}
                 className={
                   window.location.pathname === "/"
