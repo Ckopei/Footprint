@@ -49,7 +49,7 @@ class About extends React.Component {
                 </div>
                 <div className="col-lg-4 offset-2 col-sm-12 avatar text-center">
                   <img
-                    src="https://avatars3.githubusercontent.com/u/52713263?s=460&v=4"
+                    src="https://kopel.dev/assets/img/itsAMeMario.jpg"
                     className="rounded-circle z-depth-1"
                     alt="Mallory_Steffes"
                   />
