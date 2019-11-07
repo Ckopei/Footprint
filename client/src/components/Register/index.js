@@ -1,4 +1,7 @@
 import React from 'react';
+import Nav from "../../components/Nav/index";
+import { Container } from "../Grid";
+import Title from "../Title/title";
 import RegisterForm from "../RegisterForm";
 //The component for doing the actual signup of the User
 class Register extends React.Component {
@@ -30,7 +33,11 @@ class Register extends React.Component {
 	render() {
 		return (
 			<div>
+				<Nav className="App-header"/>
+				<Container>
+					<Title/>
 				<RegisterForm onRegister={this.register} />
+				</Container>
 			</div>
 		)
 	}

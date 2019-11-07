@@ -4,7 +4,7 @@ import Auth from "../../utils/Auth";
 
 import "./style.css";
 
-class Nav extends Component {
+class LogOutNav extends Component {
   state = {
     open: false,
     width: window.innerWidth
@@ -70,14 +70,15 @@ class Nav extends Component {
             </li>
             <li className="nav-item">
               <Link
+                onClick={this.logout}
                 className={
                   window.location.pathname === "/"
                     ? "nav-link active"
                     : "nav-link"
                 }
-                to="/login"
+                to="/"
               >
-                Login
+                Log Out
               </Link>
             </li>
           </ul>
@@ -87,4 +88,4 @@ class Nav extends Component {
   }
 }
 
-export default Nav;
+export default LogOutNav;
