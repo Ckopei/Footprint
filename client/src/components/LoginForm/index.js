@@ -27,6 +27,7 @@ class LoginForm extends React.Component {
           </div>
           <div className="form-group">
             <input
+              required
               className="form-control"
               ref={input => (this.usernameElem = input)}
               type="text"
@@ -35,6 +36,7 @@ class LoginForm extends React.Component {
             />
             <br />
             <input
+              required
               className="form-control"
               ref={input => (this.passwordElem = input)}
               type="password"
@@ -46,7 +48,9 @@ class LoginForm extends React.Component {
               Log In
             </button>
             <span>or</span>
-            <Link to="/register"><button className="btn btn-danger">Sign Up</button></Link>
+            <Link to="/register">
+              <button className="btn btn-danger">Sign Up</button>
+            </Link>
           </div>
         </form>
       </div>
