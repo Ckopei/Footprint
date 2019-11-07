@@ -13,7 +13,7 @@ const routes = require('./routes/index');
 const PORT = process.env.PORT || 3001;
 /* === Call Express as app === */
 const app = express();
-
+const MONGODB_URI = process.env.MONGODB_URI|| "mongodb://localhost/mern_authenticate_me"
 
 /* === Middleware === */
 app.use(logger('dev'));
@@ -34,6 +34,9 @@ app.use(flash());
 /* Serve up static assets (usually on heroku) */
 if (process.env.NODE_ENV === "production") {
   app.use(passport.session()); app.use(express.static(path.join(__dirname, '../build')));
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  });
 };
 
 /* === Routing === */
@@ -54,7 +57,8 @@ passport.serializeUser(Account.serializeUser());
 passport.deserializeUser(Account.deserializeUser());
 
 /* === Mongoose Connection === */
-mongoose.connect('mongodb://localhost/mern_authenticate_me',{ useNewUrlParser: true });
+// mongoose.connect('mongodb://localhost/mern_authenticate_me',{ useNewUrlParser: true });
+mongoose.connect(MONGODB_URI);
 
 /* === Error Handling === */
 

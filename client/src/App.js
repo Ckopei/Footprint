@@ -4,7 +4,6 @@ import {
   Route,
   Redirect,
   Switch,
-  withRouter
 } from "react-router-dom";
 import Auth from "./utils/Auth";
 import { Login, username } from "./components/Login";
@@ -19,6 +18,7 @@ import "./App.css";
 const AuthExample = () => (
   <Router>
     <div className="main-body">
+
       <Switch>
         <Route exact path="/" component={PublicRoute} />
         <Route exact path="/login" component={Login} />
@@ -51,6 +51,7 @@ const AuthExample = () => (
 //     <p>You are not logged in.</p>
 //   )
 // );
+
 
 // This is the private route component this checks for an authorized user here
 const PrivateRoute = ({ component: Component, ...rest }) => (

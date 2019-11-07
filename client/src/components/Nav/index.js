@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Auth from "../../utils/Auth";
 
 import "./style.css";
-// import Login from "../LoginForm";
 
 class Nav extends Component {
   state = {
