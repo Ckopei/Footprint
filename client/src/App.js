@@ -4,11 +4,10 @@ import {
   Route,
   Redirect,
   Switch,
-  withRouter
 } from "react-router-dom";
 import Auth from "./utils/Auth";
 import Nav from "./components/Nav";
-import {Login, username} from "./components/Login";
+import {Login} from "./components/Login";
 import Register from "./components/Register";
 import { Container } from "./components/Grid";
 import PublicRoute from "./pages/PublicRoute";
@@ -30,7 +29,7 @@ const AuthExample = () => (
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
           <Route exact path ="/tips" component={Tips} /> 
-          <Route exact path="/protected" component={ProtectedRoute} />
+          <PrivateRoute exact path="/protected" component={ProtectedRoute} />
           {/* ILL FIX THIS. <Route component={NoMatch} /> */}
         </Switch>
       </Container>
@@ -38,23 +37,23 @@ const AuthExample = () => (
   </Router>
 );
 
-//Authbutton component / withRouter is imported from react-router
-const AuthButton = withRouter(({ history }) => (
-	Auth.isAuthenticated ? (
-		<div className="container">
-			<p>Success! You are Logged In!</p>
-			<button className="btn btn-danger"
-				onClick={() => {
-					Auth.signout(() => history.push('/'))
-				}}>
-				Sign out
-			</button>
-			<span className="spanAuth">Hello {username}</span>
-		</div>
-	) : (
-			<p>You are not logged in.</p>
-		)
-))
+// //Authbutton component / withRouter is imported from react-router
+// const AuthButton = withRouter(({ history }) => (
+// 	Auth.isAuthenticated ? (
+// 		<div className="container">
+// 			<p>Success! You are Logged In!</p>
+// 			<button className="btn btn-danger"
+// 				onClick={() => {
+// 					Auth.signout(() => history.push('/'))
+// 				}}>
+// 				Sign out
+// 			</button>
+// 			<span className="spanAuth">Hello {username}</span>
+// 		</div>
+// 	) : (
+// 			<p>You are not logged in.</p>
+// 		)
+// ))
 
 // This is the private route component this checks for an authorized user here
 const PrivateRoute = ({ component: Component, ...rest }) => (
