@@ -2,9 +2,7 @@ import React from "react";
 import "./style.css";
 //Uses the Auth methods to actually login with the LoginForm Component.
 class Buttons extends React.Component {
-  myfunction() {
-    console.log("clicked");
-  }
+  
 
   render() {
     return (
@@ -55,7 +53,7 @@ class Buttons extends React.Component {
             <img
               className="biggerImg"
               src="/buttons/water.svg"
-              alt="house"
+              alt="hous"
               onClick={this.props.updateScore}
             />
             <span>Skipped a shower</span>
