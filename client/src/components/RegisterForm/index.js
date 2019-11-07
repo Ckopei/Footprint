@@ -29,6 +29,7 @@ class RegisterForm extends React.Component {
           </div>
           <div className="form-group">
             <input
+              required
               className="form-control"
               ref={input => (this.usernameElem = input)}
               type="text"
@@ -37,6 +38,7 @@ class RegisterForm extends React.Component {
             />
             <br />
             <input
+              required
               className="form-control"
               ref={input => (this.passwordElem = input)}
               type="password"
@@ -44,11 +46,15 @@ class RegisterForm extends React.Component {
               placeholder="Password"
             />
             <br />
-            <button className="btn btn btn-danger" type="submit">
-              Sign Up
-            </button>
-			<span>or</span>
-            <Link to="/login"><button className="btn btn-success">Log In</button></Link>
+            <Link to="/welcome">
+              <button className="btn btn btn-danger" type="submit">
+                Sign Up
+              </button>
+            </Link>
+            <span>or</span>
+            <Link to="/login">
+              <button className="btn btn-success">Log In</button>
+            </Link>
           </div>
         </form>
       </div>
