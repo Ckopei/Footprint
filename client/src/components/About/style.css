@@ -40,7 +40,7 @@
     padding: 20px;
     background: rgb(255, 255, 255, .5);
 }
-img {
+.rounded-circle {
     width: 250px;
     height: 250px;
 }
