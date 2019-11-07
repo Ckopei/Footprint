@@ -11,7 +11,6 @@ import Register from "./components/Register";
 import PublicRoute from "./pages/PublicRoute";
 import ProtectedRoute from "./pages/ProtectedRoute";
 import Tips from "./components/Tips/Tips";
-import Welcome from "./pages/Welcome";
 import About from "./components/About/About";
 import "./App.css";
 
@@ -25,7 +24,6 @@ const AuthExample = () => (
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
         <Route exact path="/tips" component={Tips} />
-        <Route exact path="/welcome" component={Welcome}/>
         <Route exact path="/about" component={About}/>
         <PrivateRoute exact path="/protected" component={ProtectedRoute} />
         {/* ILL FIX THIS. <Route component={NoMatch} /> */}
