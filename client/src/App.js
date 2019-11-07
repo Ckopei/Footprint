@@ -14,6 +14,7 @@ import { Container } from "./components/Grid";
 import PublicRoute from "./pages/PublicRoute";
 import ProtectedRoute from "./pages/ProtectedRoute";
 import Title from "./components/Title/title";
+import Tips from "./components/Tips/Tips"
 import "./App.css";
 
 //Now we have all the stuff we need .. let's render some components with the Router
@@ -28,7 +29,7 @@ const AuthExample = () => (
           <Route exact path="/" component={PublicRoute} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
-          {/* PLS YOURE THE BEST USE THIS ROUTE <Route exact path ="/tips" component={Tips} /> */}
+          <Route exact path ="/tips" component={Tips} /> 
           <Route exact path="/protected" component={ProtectedRoute} />
           {/* ILL FIX THIS. <Route component={NoMatch} /> */}
         </Switch>
