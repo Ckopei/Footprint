@@ -42,7 +42,13 @@ Then start the project <br>
 
 ## The App in Action
 
-Once they've signed up, users can log in to view their home page.
+Once they've signed up, users can log in to view their home page. This is the main landing page for the app, and contains Footprint's set of buttons that allow the user to keep track of the eco-friendly "score".
+
+![Footprint (1)](https://user-images.githubusercontent.com/52713263/68436855-3df98280-018d-11ea-9599-bb369468f010.gif)
+
+Logged in users can also access a great beginner's set of tips and tricks on easy ways to start lightening their footprint.
+
+![Footprint](https://user-images.githubusercontent.com/52713263/68436831-26ba9500-018d-11ea-9b9f-5597b81bdd2b.gif)
 
 
 
