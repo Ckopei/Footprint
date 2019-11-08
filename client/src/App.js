@@ -6,7 +6,7 @@ import {
   Switch,
 } from "react-router-dom";
 import Auth from "./utils/Auth";
-import { Login, username } from "./components/Login";
+import { Login } from "./components/Login";
 import Register from "./components/Register";
 import PublicRoute from "./pages/PublicRoute";
 import ProtectedRoute from "./pages/ProtectedRoute";
@@ -31,26 +31,6 @@ const AuthExample = () => (
     </div>
   </Router>
 );
-
-//Authbutton component / withRouter is imported from react-router
-// const AuthButton = withRouter(({ history }) =>
-//   Auth.isAuthenticated ? (
-//     <div className="container">
-//       <p>Success! You are Logged In!</p>
-//       <button
-//         className="btn btn-danger"
-//         onClick={() => {
-//           Auth.signout(() => history.push("/"));
-//         }}
-//       >
-//         Sign out
-//       </button>
-//       <span className="spanAuth">Hello {username}</span>
-//     </div>
-//   ) : (
-//     <p>You are not logged in.</p>
-//   )
-// );
 
 
 // This is the private route component this checks for an authorized user here

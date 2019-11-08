@@ -1,9 +1,7 @@
 import React from "react";
 import "./style.css";
-//Uses the Auth methods to actually login with the LoginForm Component.
 class Buttons extends React.Component {
   
-
   render() {
     return (
       <div className="container buttonContainer">
