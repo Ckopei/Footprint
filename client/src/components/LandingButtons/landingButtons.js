@@ -5,7 +5,6 @@ const buttonDivStyling = {
   margin: "0 auto",
   width: "300px",
   position: "relative",
-  top: "200px"
 };
 
 const signUp = {
