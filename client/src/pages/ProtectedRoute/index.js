@@ -17,11 +17,11 @@ class ProtectedRoute extends React.Component {
   // component mount, any time the page is loaded.
   componentDidMount() {
     console.log(`look ${username}`);
-    this.firstThing();
+    this.getUserObj();
   }
 
   // this function does a get request to pull back the currently logged in user on this page and dump the user object into our state.
-  firstThing = () => {
+  getUserObj = () => {
     API.getUser(username).then(res => {
       // console.log(res.data);
 	  this.setState({ user: res.data });
@@ -34,7 +34,7 @@ class ProtectedRoute extends React.Component {
     console.log(this.state);
     API.updateScore(this.state.user).then(res => {
       console.log(res);
-      this.firstThing();
+      this.getUserObj();
     });
   };
 
