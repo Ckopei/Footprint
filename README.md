@@ -15,7 +15,7 @@ The app can be found [here](https://fathomless-headland-64750.herokuapp.com/).
 ![Screen Shot 2019-11-07 at 6 04 58 PM](https://user-images.githubusercontent.com/52713263/68435362-23bda580-0189-11ea-91da-66d4bd257cdc.png)
 
 ## MVC
-This project is structured in Full Stack Javascript with Mongoose Models and REACT Views and Controllers. The app can: 
+This project is structured in the MVC paradigm. We use React for the views and front end routing, node.js for the backend API routes, and Mongoose as the ORM for our MongoDB. The app can: 
 
 - Register a new user
 - Login with an existing user
@@ -23,22 +23,35 @@ This project is structured in Full Stack Javascript with Mongoose Models and REA
 - Log Out
 
 ## Tech Stack
++ [MongoDB](https://www.mongodb.com/)
+    - Document based database for storing user data.
 + [MONGOOSE ORM](https://www.npmjs.com/package/mongoose)
+    - Handles object relational mapping for our MongoDB.
 + [EXPRESS](https://www.npmjs.com/package/express)
+    - Back end API route handling
 + [REACT](https://reactjs.org/)
+    - Dynamic views
 + [REACT ROUTER](https://reacttraining.com/react-router/)
+    - Handling all view routes
++ [Axios](https://www.npmjs.com/package/axios)
+    - Handling client side HTTP requests
 + [NODE](https://nodejs.org/en/)
+    - Runtime environment for running JavaScript outside of the browser
 + [PASSPORT](http://www.passportjs.org/docs/username-password/)
+    - User authentication
 + [BOOTSTRAP](https://getbootstrap.com/)
+    - Predefined CSS3 library
+    
 
-#### Install and run
+#### Install and run locally
 Install all the dependencies with Yarn or NPM <br>
 `npm install` <br>
 Make sure you start Mongod and have mongoDB running..<br>
-`mongod` <br>
+`mongod <filepath to database>` <br>
 `mongo` <br>
 Then start the project <br>
 `npm start`
+
 
 ## The App in Action
 
