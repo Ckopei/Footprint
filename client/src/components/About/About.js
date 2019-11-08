@@ -59,9 +59,8 @@ class About extends React.Component {
                     <strong>Back-End Developer</strong>
                   </p>
                   <p className="aboutText">
-                    I’m a full-stack developer, currently based in Orlando. I
-                    de-stress by playing board games, weightlifting, and
-                    indulging a bad online shopping habit.
+                    I’m a full-stack developer living in Orlando. I
+                    love traveling, and impulsively buy and collect guitars. 
                   </p>
                 </div>
               </div>
