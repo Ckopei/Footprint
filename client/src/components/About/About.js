@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "../Grid";
 import Title from "../Title/title";
-import Nav from "../Nav/index";
+import LogOutNav from "../LogOutNav/LogOutNav";
 import "./style.css";
 import { Link } from "react-router-dom";
 
@@ -9,7 +9,7 @@ class About extends React.Component {
   render() {
     return (
       <div>
-        <Nav />
+        <LogOutNav />
         <Container fluid>
           <div className="container">
             <Title />
