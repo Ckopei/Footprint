@@ -64,6 +64,23 @@ Logged in users can also access a great beginner's set of tips and tricks on eas
 ![Footprint](https://user-images.githubusercontent.com/52713263/68436831-26ba9500-018d-11ea-9b9f-5597b81bdd2b.gif)
 
 
+## How the App tracks and uses the User document
+
+The login component has an variable for username set to an empty string. Once a user signs up and successfully registers an account, the login component reassigns that variable to the users input. This username variable is then exported from that component, and imported into our protected route.
+
+The Protectedroute component is a stateful component, and on componentDidMount() calls a reusable function (getUserObj)  for grabbing user data and putting the entire user object into the state.
+![getUserObj](https://user-images.githubusercontent.com/52455151/68442358-bae12800-019e-11ea-80dd-189b4e860652.png)
+
+GetUserObj uses Axios to send a GET request to our express routes, and passes in the username as part of the req.body.
+![02UserData](https://user-images.githubusercontent.com/52455151/68442411-e7953f80-019e-11ea-9724-fdb17803fbf5.png)
+
+On the backend, the express route then takes this req.body of the username and passes it along to a mongoose findOne function, which returns a user object.
+![03userData](https://user-images.githubusercontent.com/52455151/68442434-f7148880-019e-11ea-8153-3e9458c57ee5.png)
+
+Once the user object is back at the client side getUserObj function, it is used to set the state of our user. This allows us to track the entire user document in a state, which we then use in a similar fashion to update the user's score on button clicks.
+![04setstate](https://user-images.githubusercontent.com/52455151/68442504-2f1bcb80-019f-11ea-88e0-788873564ea4.png)
+
+
 
 
 
