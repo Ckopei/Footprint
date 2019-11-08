@@ -1,8 +1,8 @@
 # Footprint
-Footprint is a full-stack MVC app, built with React.js and backed by an mLab Mongo database. starter with basic components routes and authentication. The project is in MVC format that includes the User model and controller. Some routes in the client are protected by the passport authentication using the local strategy. 
+Footprint is a full-stack MVC app, built with React.js and backed by an mLab Mongo database. The project is in MVC format that includes the User model and controller. Some routes in the client are protected by the passport authentication using the local strategy. 
 
 ## Purpose and Inspiration
-Footprint was created to help gameify staying environmentally active. By clicking buttons signifying different actions, they can track what they've done each day to contribute to decreasing their overall carbon footprint. T
+Footprint was created to help gameify staying environmentally active. By clicking buttons signifying different actions, they can track what they've done each day to contribute to decreasing their overall carbon footprint. The app also provides the user with helpful tips and tricks for different materials.
 
 
 ## Live Project
