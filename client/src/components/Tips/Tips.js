@@ -8,7 +8,7 @@ class Tips extends React.Component {
   render() {
     return (
       <div>
-        <LogOutNav className="App-header" />
+        <LogOutNav />
         <Container>
           <Title />
           <div className="tipsContainer text-center">
