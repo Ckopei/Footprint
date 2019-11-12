@@ -1,5 +1,7 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
+import { Spring } from "react-spring/renderprops";
+
 import Nav from "../Nav/index";
 import { Container } from "../Grid";
 import Title from "../Title/title";
@@ -54,10 +56,16 @@ class Login extends React.Component {
 
     return (
       <div>
-        <Nav className="App-header"/>
+        <Nav className="App-header" />
         <Container>
           <Title />
-          <LoginForm onLogin={this.login} />
+          <Spring from={{ opacity: 0 }} to={{ opacity: 1 }} config={{duration:1000}}>
+            {props => (
+              <div style={props}>
+                <LoginForm onLogin={this.login} />
+              </div>
+            )}
+          </Spring>
         </Container>
       </div>
     );

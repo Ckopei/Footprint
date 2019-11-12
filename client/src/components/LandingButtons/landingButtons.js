@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 // Styles for the buttons
 const buttonDivStyling = {
   margin: "0 auto",
+  marginTop: "300px",
   width: "300px",
   position: "relative",
 };
