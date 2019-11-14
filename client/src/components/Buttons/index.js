@@ -1,7 +1,9 @@
 import React from "react";
 import "./style.css";
+import { Spring } from "react-spring/renderprops";
+
 class Buttons extends React.Component {
-  
+
   render() {
     return (
       <div className="container buttonContainer">
@@ -51,7 +53,7 @@ class Buttons extends React.Component {
             <img
               className="biggerImg"
               src="/buttons/water.svg"
-              alt="hous"
+              alt="house"
               onClick={this.props.updateScore}
             />
             <span>Skipped a shower</span>

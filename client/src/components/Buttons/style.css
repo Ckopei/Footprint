@@ -9,13 +9,17 @@
 .biggerImg {
   width: 80px;
   height: 80px;
+  cursor: pointer;
 }
 
 .buttonColumn {
   margin-bottom: 10px;
 }
+
 .buttonColumn > span {
   margin-left: 10%;
   font-size: 18px;
   font-weight: 100;
 }
+
+
