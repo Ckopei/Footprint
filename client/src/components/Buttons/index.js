@@ -1,6 +1,5 @@
 import React from "react";
 import "./style.css";
-import { Spring } from "react-spring/renderprops";
 
 class Buttons extends React.Component {
 

@@ -3,6 +3,7 @@
     bottom: 100%;
     right: 20%;
     width: 300px;
+    margin-bottom: 3%
 }
 
 h4, h3 {
@@ -11,5 +12,5 @@ h4, h3 {
 
 .userContainer {
     position: relative;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
 }

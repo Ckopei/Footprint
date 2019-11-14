@@ -1,5 +1,4 @@
 import React from "react";
-import { render } from "react-dom";
 import { Spring } from "react-spring/renderprops";
 
 import { Container } from "../Grid";
@@ -18,9 +17,9 @@ class About extends React.Component {
             <Title />
           </div>
           <Spring
-            from={{ opacity: 0, marginLeft: -1000 }}
-            to={{ opacity: 1, marginLeft: 0 }}
-            config={{ duration: 800, mass: 1000, clamp: false }}
+            from={{ opacity: 0, marginTop: -1000 }}
+            to={{ opacity: 1, marginTop: 0 }}
+            config={{ duration: 800 }}
           >
             {props => (
               <div style={props}>
