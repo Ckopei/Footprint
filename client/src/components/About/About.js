@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Spring } from "react-spring/renderprops";
 import { Container, Row, Col } from "../Grid";
 import Title from "../Title/title";
