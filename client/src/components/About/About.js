@@ -50,6 +50,7 @@ class NewAbout extends React.Component {
                         <Card
                           id="malCard"
                           title="Mallory Steffes"
+                          position="Front End Developer"
                           avatar="https://avatars3.githubusercontent.com/u/52713263?s=460&v=4"
                           bio="I’m a full-stack developer, currently based in
                   Orlando. I de-stress by playing board games,
@@ -64,6 +65,7 @@ class NewAbout extends React.Component {
                         <Card
                           id="camCard"
                           title="Cameron Kopel"
+                          position="Back End Developer"
                           avatar="https://kopel.dev/assets/img/itsAMeMario.jpg"
                           bio="I’m a full-stack developer living in Orlando. I love
                     traveling, and impulsively buy and collect guitars."

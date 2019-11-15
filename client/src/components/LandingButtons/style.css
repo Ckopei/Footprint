@@ -1,0 +1,35 @@
+.signInButtons {
+  margin-top: 25%;
+  margin-left: 40%;
+}
+
+.signUp {
+  width: 100px;
+  margin: 20px;
+  color: white;
+}
+
+.logIn {
+  width: 100px;
+  margin: 20px;
+  color: white;
+  background-color: #418b06;
+}
+
+@media screen and (max-width: 774px) {
+  .signInButtons {
+    margin-left: auto;
+    text-align: center;
+  }
+  .logIn {
+    margin-bottom: 30px;
+    width: 300px;
+    display: inline;
+  }
+  .signUp {
+    width: 300px;
+    display: inline;
+  }
+
+  
+}

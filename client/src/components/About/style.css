@@ -1,12 +1,11 @@
 .about {
     padding: 0px;
-  margin-top: 5%;
   overflow: scroll;
   background: rgb(255, 255, 255);
   -webkit-box-shadow: 0px 13px 39px 20px rgba(0,0,0,0.41);
   -moz-box-shadow: 0px 13px 39px 20px rgba(0,0,0,0.41);
   box-shadow: 0px 13px 39px 20px rgba(0,0,0,0.41);
-  margin-bottom: 5%;
+  margin-bottom: 1%;
   border-radius: 10px;
 }
 
@@ -20,7 +19,7 @@
   margin: 0;
   padding: 30px;
   background: rgb(65, 139, 6, .5);
-  height: 500px;
+  height: 550px;
 }
 
 .card {
