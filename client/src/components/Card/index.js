@@ -1,6 +1,6 @@
 import React from "react";
 
-function Card({ id, avatar, title, bio, linkedIn, github, mail }) {
+function Card({ id, avatar, title, position, bio, linkedIn, github, mail }) {
   return (
     <div className="card" id={id}>
       <div className="card-body text-center">
@@ -10,6 +10,7 @@ function Card({ id, avatar, title, bio, linkedIn, github, mail }) {
              {title}
           </strong>
         </h3>
+        <h6 className="subtitle">{position}</h6>
         <hr></hr>
         <div className="card-text">{bio}</div>
         <div className="icon-block">
