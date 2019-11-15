@@ -1,51 +1,54 @@
-.container-fluid {
-    width: 100%;
-}
-
-.aboutContainer {
-    height: 100vh;
-    overflow: scroll;
-    margin-bottom: 10%;
+.about {
+    padding: 0px;
+  margin-top: 5%;
+  overflow: scroll;
+  background: rgb(255, 255, 255);
+  -webkit-box-shadow: 0px 13px 39px 20px rgba(0,0,0,0.41);
+  -moz-box-shadow: 0px 13px 39px 20px rgba(0,0,0,0.41);
+  box-shadow: 0px 13px 39px 20px rgba(0,0,0,0.41);
+  margin-bottom: 5%;
 }
 
 .aboutApp {
-    align-content: center;
-    padding: 30px;
-    padding-top: 60px;
-    margin-top: 50px;
-    height: 300px;
-    background: rgb(255, 255, 255, .8);
-}
-.jumbotron-heading {
-    margin-bottom: 30px;
-    font-weight: 400;
-}
-
-.lead {
-    max-width: 45rem;
-    margin: 0 auto;
-}
-
-.strong {
-    font-weight: 400;
-
+  margin: 0;
+  padding: 30px;
 }
 
 .creatorContainer {
-    background: rgb(65, 139, 6, .5);
-    padding: 30px;
+  margin: 0;
+  padding: 30px;
+  background: rgb(65, 139, 6, .5);
+  height: 500px;
+}
 
+.card {
+ 
+  margin: 0 auto;
+  bottom: 10%;
+}
+
+.card-body {
+    background: white;
 }
 
 .avatar {
-    padding: 20px;
-    background: rgb(255, 255, 255);
+    border: 0.3rem solid rgba(#fff, 0.3);
+    margin-top: -6rem;
+    margin-bottom: 1rem;
+    max-width: 9rem;
 }
-.rounded-circle {
-    width: 250px;
-    height: 250px;
+.fa {
+    padding: 10px;
 }
 
-.aboutName {
-    margin: 10px;
+@media screen and (max-width: 991px) {
+    .creatorContainer {
+        overflow: scroll;
+    }
+  #camCard {
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
 }
+
+
