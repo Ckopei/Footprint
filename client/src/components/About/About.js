@@ -4,8 +4,8 @@ import { Spring } from "react-spring/renderprops";
 import { Container } from "../Grid";
 import Title from "../Title/title";
 import LogOutNav from "../LogOutNav/LogOutNav";
-import "./style.css";
 import { Link } from "react-router-dom";
+import "./style.css";
 
 class About extends React.Component {
   render() {
@@ -17,9 +17,9 @@ class About extends React.Component {
             <Title />
           </div>
           <Spring
-            from={{ opacity: 0, marginLeft: -1000 }}
-            to={{ opacity: 1, marginLeft: 0 }}
-            config={{ duration: 800, mass: 1000, clamp: false }}
+            from={{ opacity: 0, marginTop: -1000 }}
+            to={{ opacity: 1, marginTop: 0 }}
+            config={{ duration: 800 }}
           >
             {props => (
               <div style={props}>
@@ -40,7 +40,7 @@ class About extends React.Component {
                       <div className="col-lg-12 mb-lg-0 mb-5 text-center">
                         <h2 className="jumbotron-heading">Behind the App</h2>
                       </div>
-                      <div className="col-lg-4 offset-1 col-sm-12 avatar">
+                      <div className="col-lg-4 offset-1 col-sm-12 avatar text-center">
                         <img
                           src="https://avatars3.githubusercontent.com/u/52713263?s=460&v=4"
                           className="rounded-circle z-depth-1"
