@@ -15,6 +15,13 @@ class NewAbout extends React.Component {
         <Container>
           <Title />
           <br></br>
+          <Spring
+            from={{ opacity: 0, marginTop: -1000 }}
+            to={{ opacity: 1, marginTop: 0 }}
+            config={{ duration: 500 }}
+          >
+            {props => (
+              <div style={props}>
           <div className="container about">
             <div className="container text-center aboutApp">
               <Row>
@@ -68,6 +75,9 @@ class NewAbout extends React.Component {
               </Row>
             </div>
           </div>
+          </div>
+            )}
+          </Spring>
         </Container>
       </div>
     );
