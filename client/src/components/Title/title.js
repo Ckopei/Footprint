@@ -1,5 +1,5 @@
 import React from "react";
-import "./title.css";
+import "./style.css";
 import TextLoop from "react-text-loop";
 
 function Title() {
