@@ -14,9 +14,9 @@ function Card({ id, avatar, title, position, bio, linkedIn, github, mail }) {
         <hr></hr>
         <div className="card-text">{bio}</div>
         <div className="icon-block">
-          <a href={linkedIn}><i className="fa fa-linkedin"></i></a>
-          <a href={github}><i className="fa fa-github"></i></a>
-          <a href={mail}><i className="fa fa-envelope"></i></a>
+          <a target="_blank" rel="noopener noreferrer" href={linkedIn}><i className="fa fa-linkedin"></i></a>
+          <a target="_blank" rel="noopener noreferrer" href={github}><i className="fa fa-github"></i></a>
+          <a target="_blank" rel="noopener noreferrer" href={mail}><i className="fa fa-envelope"></i></a>
 
         </div>
       </div>

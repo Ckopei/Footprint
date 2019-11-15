@@ -6,24 +6,24 @@ class Score extends React.Component {
   render() {
     return (
       <div className="scoreContainer">
-        <h3 className="userDisplay">
+        <h5 className="userDisplay">
           Welcome, <span>{this.props.username}</span>!
-        </h3>
-        <h3 className="score">
+        </h5>
+        <h5 className="score">
           Your score is:{" "}
           <AnimatedNumber
             component="text"
             value={this.props.score}
             style={{
+              marginLeft: "2%",
               transition: "0.8s ease-out",
-              fontSize: 48,
+              fontSize: 30,
               transitionProperty: "background-color, color, opacity"
             }}
-           
             duration={300}
             stepPrecision={0}
           />
-        </h3>
+        </h5>
       </div>
     );
   }

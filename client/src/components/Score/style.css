@@ -1,17 +1,43 @@
 .scoreContainer {
-    position: absolute;
-    bottom: 100%;
-    right: 20%;
-    width: 300px;
-    margin-bottom: 3%
+  position: absolute;
+  bottom: 90%;
+  right: 15%;
+  width: 300px;
+  margin-bottom: 4%;
+  padding-bottom: 1%;
 }
 
-h4, h3 {
-    font-weight: 300;
+h4,
+h3 {
+  font-weight: 300;
 }
 
 .userContainer {
-    position: relative;
-    margin-bottom: 10%;
+  position: relative;
+  margin-bottom: 10%;
 }
 
+.userDisplay,
+.score {
+  font-family: "Fira Sans", sans-serif;
+}
+
+@media screen and (max-width: 1000px) {
+  .scoreContainer {
+    right: 0;
+    text-align: right;
+    margin-bottom: 15%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .scoreContainer {
+    right: 0;
+    text-align: right;
+    margin-bottom: 25%;
+  }
+  .userDisplay,
+  .score {
+    font-size: 1rem;
+  }
+}
