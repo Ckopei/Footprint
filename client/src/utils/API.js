@@ -9,5 +9,18 @@ export default {
     return (
       axios.put("/api/test/", user)
     )
+  },
+
+  getScrape: function(){
+    return (
+      axios.get("/api/scrape/")
+    )
+  },
+
+  showArticles: function(){
+    return(
+      axios.get("/api/articles/")
+    )
   }
+
 };

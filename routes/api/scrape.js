@@ -39,7 +39,7 @@ app.get("/scrape", function(req, res) {
 
   app.get("/articles", function(req, res) {
     // TODO: Finish the route so it grabs all of the articles
-    db.Article.find({}, (err, docs) =>{
+    db.find({}, (err, docs) =>{
       if (err) throw err;
       res.json(docs);
     })
