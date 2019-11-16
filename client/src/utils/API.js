@@ -19,7 +19,7 @@ export default {
 
   showArticles: function(){
     return(
-      axios.get("/api/articles/")
+      axios.get("/api/scrape/articles/")
     )
   }
 
