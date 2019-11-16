@@ -2,26 +2,28 @@ import React from "react";
 import API from "../../utils/API";
 import { Container } from "../../components/Grid";
 import Title from "../../components/Title/title";
+import Article from "../../components/Article"
 import LogOutNav from "../../components/LogOutNav/LogOutNav";
 
 class News extends React.Component {
+
+    state = {
+        articles: []
+    }
   
   componentDidMount() {
     this.scrape();
     this.display();
   }
 
-  // this function does a get request to pull back the currently logged in user on this page and dump the user object into our state.
   scrape = () => {
     API.getScrape();
   };
-  //put request that just adds 6 to the user score every click, then updates the user state.
+ 
   display = () => {
     API.showArticles().then(data => {
-        for (var i = 0; i < data.length; i++) {
-            // Display the apropos information on the page
-            document.querySelector("#articles").append("<p>" + data[i].title + "<br />" + data[i].link + "</p>");
-          }
+        console.log(data.data)
+        this.setState({articles: data.data})
     });
   };
 
@@ -31,7 +33,13 @@ class News extends React.Component {
         <LogOutNav />
         <Container>
           <Title />
-          <div className="articles"></div>
+          <div>
+              {this.state.articles.map(article => {
+                  return (
+                      <Article key={article.key} title={article.title} link={article.link}/>
+                  )
+              })}
+          </div>
         </Container>
       </div>
     );
