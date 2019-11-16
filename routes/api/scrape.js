@@ -1,10 +1,15 @@
 const router = require("express").Router();
 const db = require("../../models/Article");
+const cheerio = require('cheerio')
+const axios = require("axios");
 
-app.get("/scrape", function(req, res) {
+
+router.route("/").get(function(req, res) {
+    console.log("backend test")
     // First, we grab the body of the html with axios
     axios.get("https://www.huffpost.com/impact/green").then(function(response) {
       // Then, we load that into cheerio and save it to $ for a shorthand selector
+      console.log("backend test")
       var $ = cheerio.load(response.data);
   
       // Now, we grab every h2 within an article tag, and do the following:
@@ -19,10 +24,11 @@ app.get("/scrape", function(req, res) {
         result.link = $(this)
           .children("a")
           .attr("href");
-  
+          
         // Create a new Article using the `result` object built from scraping
         db.create(result)
           .then(function(dbArticle) {
+            console.log("backend test")
             // View the added result in the console
             console.log(dbArticle);
           })
@@ -37,7 +43,7 @@ app.get("/scrape", function(req, res) {
     });
   });
 
-  app.get("/articles", function(req, res) {
+  router.route("/articles").get(function(req, res) {
     // TODO: Finish the route so it grabs all of the articles
     db.find({}, (err, docs) =>{
       if (err) throw err;
