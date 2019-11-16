@@ -12,6 +12,7 @@ import PublicRoute from "./pages/PublicRoute";
 import ProtectedRoute from "./pages/ProtectedRoute";
 import Tips from "./components/Tips/Tips";
 import About from "./components/About/About";
+import News from "./components/News"
 import "./App.css";
 
 //Now we have all the stuff we need .. let's render some components with the Router
@@ -25,6 +26,7 @@ const AuthExample = () => (
         <Route exact path="/register" component={Register} />
         <Route exact path="/tips" component={Tips} />
         <Route exact path="/about" component={About}/>
+        <Route exact path="/news" component={News} />
         <PrivateRoute exact path="/protected" component={ProtectedRoute} />
         {/* ILL FIX THIS. <Route component={NoMatch} /> */}
       </Switch>
