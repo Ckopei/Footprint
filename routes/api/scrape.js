@@ -5,6 +5,7 @@ const axios = require("axios");
 
 
 router.route("/").get(function(req, res) {
+    
     // First, we grab the body of the html with axios
     axios.get("https://old.reddit.com/r/environment/").then(function(response) {
       // Then, we load that into cheerio and save it to $ for a shorthand selector

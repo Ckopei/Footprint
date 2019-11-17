@@ -22,7 +22,6 @@ class News extends React.Component {
  
   display = () => {
     API.showArticles().then(data => {
-        console.log(data.data)
         this.setState({articles: data.data})
     });
   };
@@ -34,9 +33,9 @@ class News extends React.Component {
         <Container>
           <Title />
           <div>
-              {this.state.articles.map(article => {
+              {this.state.articles.map((article, index) => {
                   return (
-                      <Article key={article.key} title={article.title} link={article.link}/>
+                      <Article key={index} title={article.title} link={article.link}/>
                   )
               })}
           </div>
