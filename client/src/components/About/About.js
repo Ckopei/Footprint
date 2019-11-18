@@ -71,7 +71,7 @@ class NewAbout extends React.Component {
                     traveling, and impulsively buy and collect guitars."
                           linkedIn="https://www.linkedin.com/in/cameronkopel/"
                           github="https://github.com/Ckopei"
-                          mail="mailto:cameron@kopels.com"
+                          mail="mailto:cameron@kopel.dev"
                         ></Card>
                       </Col>
                     </Row>
