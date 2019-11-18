@@ -1,6 +1,6 @@
 import React from "react";
 import API from "../../utils/API";
-import { Container, Row, Col } from "../../components/Grid";
+import { Container, Row } from "../../components/Grid";
 import Title from "../../components/Title/title";
 import Article from "../../components/Article";
 import LogOutNav from "../../components/LogOutNav/LogOutNav";
