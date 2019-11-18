@@ -1,16 +1,27 @@
 import React from "react";
-import { Col } from "../../components/Grid";
+import { Row, Col } from "../../components/Grid";
 import "./style.css";
 
 class Article extends React.Component {
   render() {
     return (
       <Col size="lg-12">
-        <div className="article">
+        <Row>
+          <div className="articleLink">
           <a href={this.props.link}>
-            <h5>{this.props.title}</h5>
+            <Col size="lg-4">
+              <img
+                alt="Article pic goes here"
+                src="https://picsum.photos/seed/picsum/200/200"
+                className="articlePicture"
+              ></img>
+            </Col>
+            <Col size="lg-8">
+              <h5 className="articleTitle">{this.props.title}</h5>
+            </Col>
           </a>
-        </div>
+          </div>
+        </Row>
       </Col>
     );
   }
