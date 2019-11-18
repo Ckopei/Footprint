@@ -12,15 +12,15 @@ class News extends React.Component {
     }
   
   componentDidMount() {
-    this.scrape();
-    this.display();
+    // this.scrape();
+    this.pushState();
   }
 
-  scrape = () => {
-    API.getScrape();
-  };
+  // scrape = () => {
+  //   API.getScrape();
+  // };
  
-  display = () => {
+  pushState = () => {
     API.showArticles().then(data => {
         this.setState({articles: data.data})
     });
