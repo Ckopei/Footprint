@@ -18,30 +18,28 @@ router.route("/").get(function (req, res) {
     $("a.title").each(function (i, element) {
       // Save an empty result object
       var result = {};
-
+      //Reddit uses relative links for self posts, so do nothing if it reaches one.
       if ($(this).attr("href").includes("/r/environment/")) {
         return;
       } else {
-         // Add the text and href of every link, and save them as properties of the result object
-      result.title = $(this)
-      //   .children("a")
-      .text();
-    result.link = $(this)
-      //   .children("a")
-      .attr("href");
+        // Add the text and href of every link, and save them as properties of the result object
+        result.title = $(this)
+          .text();
+        result.link = $(this)
+          .attr("href");
 
-    // Create a new Article using the `result` object built from scraping
-    db.create(result)
-      .then(function (dbArticle) {
-        // View the added result in the console
-        console.log(dbArticle);
-      })
-      .catch(function (err) {
-        // If an error occurred, log it
-        console.log(err);
-      });
+        // Create a new Article using the `result` object built from scraping
+        db.create(result)
+          .then(function (dbArticle) {
+            // View the added result in the console
+            console.log(dbArticle);
+          })
+          .catch(function (err) {
+            // If an error occurred, log it
+            console.log(err);
+          });
       }
-     
+
     });
 
     // Send a message to the client
@@ -50,7 +48,7 @@ router.route("/").get(function (req, res) {
 });
 
 router.route("/articles").get(function (req, res) {
-  // TODO: Finish the route so it grabs all of the articles
+  //empty object so it will pull every one. Reddit caps their pages to roughly 30 links, so we shouldnt ever have more in our collection.
   db.find({}, (err, docs) => {
     if (err) throw err;
     res.json(docs);
