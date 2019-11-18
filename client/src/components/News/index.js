@@ -1,16 +1,16 @@
 import React from "react";
 import API from "../../utils/API";
-import { Container } from "../../components/Grid";
+import { Container, Row, Col } from "../../components/Grid";
 import Title from "../../components/Title/title";
-import Article from "../../components/Article"
+import Article from "../../components/Article";
 import LogOutNav from "../../components/LogOutNav/LogOutNav";
+import "./style.css";
 
 class News extends React.Component {
+  state = {
+    articles: []
+  };
 
-    state = {
-        articles: []
-    }
-  
   componentDidMount() {
     // this.scrape();
     this.pushState();
@@ -21,8 +21,9 @@ class News extends React.Component {
   // };
  
   pushState = () => {
+
     API.showArticles().then(data => {
-        this.setState({articles: data.data})
+      this.setState({ articles: data.data });
     });
   };
 
@@ -32,12 +33,23 @@ class News extends React.Component {
         <LogOutNav />
         <Container>
           <Title />
-          <div>
+          <div className="articleContainer">
+            <h3 className="text-center">The Latest News</h3>
+            <p className="lead text-center">
+              Click on the links below to read the latest in environmental news!
+            </p>
+            <hr></hr>
+            <Row>
               {this.state.articles.map((article, index) => {
-                  return (
-                      <Article key={index} title={article.title} link={article.link}/>
-                  )
+                return (
+                    <Article className="articleColumn"
+                      key={index}
+                      title={article.title}
+                      link={article.link}
+                    />
+                );
               })}
+            </Row>
           </div>
         </Container>
       </div>
