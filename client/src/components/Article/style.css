@@ -1,7 +1,24 @@
-.article {
+.articleLink {
   background: white;
-  border: 2px solid lightgray; 
+  width: 100%;
+  border: 2px solid lightgray;
   border-radius: 10px;
   margin: 10px;
   padding: 10px;
+  overflow: hidden;
+  color: black;
+  float: left;
+}
+.articleLink:hover { border-color: green}
+
+.articlePicture {
+  height: 8em;
+  width: 8em;
+  border-radius: 10px;
+  float: left;
+}
+.articleTitle {
+  position: relative;
+  left: 2rem;
+  margin-right: 2rem;
 }
