@@ -22,7 +22,7 @@ class Tips extends React.Component {
               <div style={props}>
                 <div className="tipsContainer text-center">
                   <h3>Tips and Tricks</h3>
-                  <p class="lead">
+                  <p className="lead">
                     Click on the buttons below to learn more about how you can
                     do your part in your community!
                   </p>

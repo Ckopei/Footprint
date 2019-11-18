@@ -1,0 +1,14 @@
+.articleContainer {
+  padding: 5%;
+  margin-top: 5%;
+  border-radius: 10px;
+  background: rgba(255, 255, 255);
+  -webkit-box-shadow: 0px 13px 39px 20px rgba(0, 0, 0, 0.41);
+  -moz-box-shadow: 0px 13px 39px 20px rgba(0, 0, 0, 0.41);
+  box-shadow: 0px 13px 39px 20px rgba(0, 0, 0, 0.41);
+  margin-bottom: 1%;
+  height: 600px;
+  overflow: scroll;
+}
+
+
