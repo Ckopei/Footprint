@@ -1,28 +1,29 @@
 import React from "react";
-import { Row, Col } from "../../components/Grid";
+import { Col } from "../../components/Grid";
+import { Spring } from "react-spring/renderprops";
+
 import "./style.css";
 
 class Article extends React.Component {
   render() {
     return (
-      <Col size="lg-12">
-        <Row>
-          <div className="articleLink">
-          <a href={this.props.link}>
-            <Col size="lg-4">
-              <img
-                alt="Article pic goes here"
-                src="https://picsum.photos/seed/picsum/200/200"
-                className="articlePicture"
-              ></img>
+      <Spring
+        from={{ opacity: 0, marginLeft: -1000 }}
+        to={{ opacity: 1, marginLeft: 0 }}
+        config={{ duration: 1000, delay: 1000 }}
+      >
+        {props => (
+          <div style={props}>
+            <Col size="lg-12">
+              <div className="articleLink">
+                <a href={this.props.link}>
+                  <h5 className="articleTitle">{this.props.title}</h5>
+                </a>
+              </div>
             </Col>
-            <Col size="lg-8">
-              <h5 className="articleTitle">{this.props.title}</h5>
-            </Col>
-          </a>
           </div>
-        </Row>
-      </Col>
+        )}
+      </Spring>
     );
   }
 }
