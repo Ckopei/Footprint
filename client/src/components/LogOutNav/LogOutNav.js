@@ -82,6 +82,18 @@ class LogOutNav extends Component {
             </li>
             <li className="nav-item">
               <Link
+                className={
+                  window.location.pathname === "/"
+                    ? "nav-link active"
+                    : "nav-link"
+                }
+                to="/news"
+              >
+                News
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
                 onClick={this.logout}
                 className={
                   window.location.pathname === "/"
