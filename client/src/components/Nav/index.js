@@ -79,18 +79,6 @@ class Nav extends Component {
                 Login
               </Link>
             </li>
-            <li className="nav-item">
-              <Link
-                className={
-                  window.location.pathname === "/"
-                    ? "nav-link active"
-                    : "nav-link"
-                }
-                to="/news"
-              >
-                News
-              </Link>
-            </li>
           </ul>
         </div>
       </nav>

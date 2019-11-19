@@ -67,6 +67,10 @@ Logged in users can also access a great beginner's set of tips and tricks on eas
 
 ![Footprint Tips Page](https://user-images.githubusercontent.com/52713263/69182038-39fb2800-0ade-11ea-814e-c9e3427a2f84.gif)
 
+Users can also access environmental news to stay up to date.
+
+![Footprint News Page](https://user-images.githubusercontent.com/52713263/69182770-adea0000-0adf-11ea-9c93-fe18ac1c03c4.gif)
+
 
 ## How the App tracks and uses the User document
 
