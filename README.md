@@ -7,7 +7,7 @@ Footprint was created to help gameify staying environmentally active. By clickin
 
 ## Live Project
 
-The app can be found [here](https://fathomless-headland-64750.herokuapp.com/).
+The app can be found [here](https://project-footprint.herokuapp.com/).
 
 
 # About the App
