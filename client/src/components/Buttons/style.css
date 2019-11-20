@@ -34,4 +34,13 @@
   }
 }
 
+img:active {
+  width: 70px;
+  height: 70px;
+  border-style: groove;
+  border-width: 2px;
+  border-radius: 15px;
+  border-color: black;
+}
+
 
